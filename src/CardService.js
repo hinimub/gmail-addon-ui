@@ -11,15 +11,15 @@ var Card = function(options){
   return newCard.build();
 };
 
-var Section = function(options){
-  var newSection = CardService.newCardSection();
-  if(options.title) newSection.setHeader(options.title);
-  if(options.collapsible) newSection.setCollapsible(options.collapsible);
+var CardSection = function(options){
+  var newCardSection = CardService.newCardSection();
+  if(options.header) newCardSection.setHeader(options.header);
+  if(options.collapsible) newCardSection.setCollapsible(options.collapsible);
   if(options.widgets) {
     if(!Array.isArray(options.widgets)) options.widgets = [options.widgets];
-    options.widgets.forEach(function(widget){ newSection.addWidget(widget) })
-  } else if(options.text) newSection.addWidget(this.TextParagraph({'text':options.text}));
-  return newSection;
+    options.widgets.forEach(function(widget){ newCardSection.addWidget(widget) })
+  } else if(options.text) newCardSection.addWidget(this.TextParagraph({'text':options.text}));
+  return newCardSection;
 };
 
 var TextParagraph = function (options){
