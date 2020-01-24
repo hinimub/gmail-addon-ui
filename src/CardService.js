@@ -24,6 +24,7 @@ var CardSection = function(options){
 
 var TextParagraph = function (options){
   var newTextParagraph = CardService.newTextParagraph();
+  if(typeof options === 'string' || options instanceof String) newTextParagraph.setText(options);
   if(options.text) newTextParagraph.setText(options.text);
   return newTextParagraph;
 };
