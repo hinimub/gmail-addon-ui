@@ -30,7 +30,7 @@ function buildAddOn(e){
 Above code can be rewritten using this library:
 ```js
 function buildAddOn(e){
-  var text1 = ui.TextParagraph({text:'TextParagraph-1'});
+  var text1 = ui.TextParagraph('TextParagraph-1');
   var text2 = ui.TextParagraph({text:'TextParagraph-2'});
 
   var cardSection1 = ui.CardSection({
